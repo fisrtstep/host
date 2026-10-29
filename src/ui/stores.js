@@ -86,7 +86,7 @@ export function useCart() {
     const items = useSyncExternalStore(cartStore.subscribe, cartStore.get);
     const count = items.reduce((sum, i) => sum + i.quantity, 0);
     const total = items.reduce((sum, i) => sum + Number(i.price) * i.quantity, 0);
-    return { items, count, total, ...cart };
+    return { lines: items, count, total, ...cart };
 }
 
 // ---- Toasts ---------------------------------------------------------------
