@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Scan remote page sources so federated Tailwind classes are not purged in the host */
+@source "../../catalog/src";
+@source "../../cart/src";
+@source "../../account/src";
