@@ -61,7 +61,7 @@ export const cart = {
                 ...items,
                 {
                     productId: product.id,
-                    title: product.title,
+                    name: product.title,
                     price: product.price,
                     image: product.image,
                     quantity,
