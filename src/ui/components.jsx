@@ -20,7 +20,7 @@ const buttonSizes = {
 export function Button({
     variant = 'primary',
     size = 'md',
-    loading = false,
+    isLoading = false,
     disabled,
     className,
     children,
@@ -30,7 +30,7 @@ export function Button({
     return (
         <button
             type={type}
-            disabled={disabled || loading}
+            disabled={disabled || isLoading}
             className={cx(
                 'inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50',
                 buttonVariants[variant],
@@ -39,7 +39,7 @@ export function Button({
             )}
             {...props}
         >
-            {loading && <Spinner size="sm" />}
+            {isLoading && <Spinner size="sm" />}
             {children}
         </button>
     );
