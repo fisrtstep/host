@@ -5,7 +5,6 @@ export {
     Button,
     Card,
     EmptyState,
-    formatPrice,
     Input,
     PageHeader,
     Price,
