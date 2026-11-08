@@ -9,6 +9,7 @@ export {
     PageHeader,
     Price,
     QuantityStepper,
+    Spacer,
     Spinner,
 } from './components';
 export { cart, toast, useCart, useToasts } from './stores';

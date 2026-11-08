@@ -196,3 +196,7 @@ export function QuantityStepper({ value, onChange, min = 1, max = 99 }) {
         </div>
     );
 }
+
+export function Spacer({ size = 'md' }) {
+    return <div className={size === 'md' ? 'h-4' : 'h-8'} aria-hidden="true" />;
+}
