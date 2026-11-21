@@ -1,10 +1,10 @@
 // Public surface of the host design system — exposed as `host/ui`.
 export {
     Alert,
-    Badge,
     Button,
     Card,
     EmptyState,
+    formatPrice,
     Input,
     PageHeader,
     Price,
