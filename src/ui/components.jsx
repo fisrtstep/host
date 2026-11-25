@@ -21,6 +21,7 @@ export function Button({
     variant = 'primary',
     size = 'md',
     loading = false,
+    fullWidth = false,
     disabled,
     className,
     children,
@@ -35,6 +36,7 @@ export function Button({
                 'inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50',
                 buttonVariants[variant],
                 buttonSizes[size],
+                fullWidth && 'w-full',
                 className,
             )}
             {...props}
@@ -194,5 +196,19 @@ export function QuantityStepper({ value, onChange, min = 1, max = 99 }) {
                 +
             </button>
         </div>
+    );
+}
+
+export function Tooltip({ label, children }) {
+    return (
+        <span className="group relative inline-flex">
+            {children}
+            <span
+                role="tooltip"
+                className="pointer-events-none absolute bottom-full left-1/2 mb-1 -translate-x-1/2 whitespace-nowrap rounded bg-slate-900 px-2 py-1 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100"
+            >
+                {label}
+            </span>
+        </span>
     );
 }

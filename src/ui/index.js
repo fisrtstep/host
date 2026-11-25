@@ -11,6 +11,7 @@ export {
     Price,
     QuantityStepper,
     Spinner,
+    Tooltip,
 } from './components';
 export { cart, toast, useCart, useToasts } from './stores';
 export { Toaster } from './Toaster';
